@@ -276,3 +276,8 @@ WARNING 2025-08-01 17:33:15,104 views 7336 24688 Impossible de récupérer les inf
 INFO 2025-08-02 11:59:44,107 views 18528 19848 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
 INFO 2025-08-02 13:05:31,804 views 18528 11220 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
 INFO 2025-08-02 14:52:52,769 views 18528 5248 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-02 15:53:06,358 views 19024 9616 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+ERROR 2025-08-02 15:59:53,613 utils 19024 22492 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 15:59:53,621 views 19024 22492 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-02 16:26:13,392 utils 19024 8696 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 16:26:13,430 views 19024 8696 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
