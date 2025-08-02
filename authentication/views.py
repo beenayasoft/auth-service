@@ -8,7 +8,14 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+from django.conf import settings
 import logging
+import os
+import uuid
+from PIL import Image
+import io
 
 from .models import User, UserProfile, UserSession
 from .serializers import (
@@ -240,69 +247,269 @@ def verify_token(request):
     })
 
 
+class UserInfoView(APIView):
+    """
+    Vue pour récupérer et mettre à jour les informations de l'utilisateur connecté
+    Endpoint: /api/auth/me/
+    OPTIMISATION CRITIQUE: Éviter tenant-service (1.97s!) - utiliser JWT directement
+    """
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get(self, request):
+        """Récupérer les informations de l'utilisateur"""
+        try:
+            user = request.user
+            if not user or not user.is_authenticated:
+                return Response(
+                    {'error': 'Utilisateur non authentifié'},
+                    status=status.HTTP_401_UNAUTHORIZED
+                )
+            
+            # Récupérer les données de base de l'utilisateur
+            user_data = UserDetailSerializer(user).data
+            
+            # Enrichir avec les informations du tenant
+            from .utils import get_tenant_info
+            tenant_info = get_tenant_info(user.tenant_id)
+            
+            if tenant_info:
+                # Ajouter les informations du tenant aux données utilisateur
+                user_data['company'] = tenant_info['name']  # Pour compatibilité frontend
+                user_data['tenant_info'] = tenant_info
+            else:
+                # Fallback si le tenant n'est pas trouvé
+                user_data['company'] = 'Entreprise inconnue'
+                user_data['tenant_info'] = None
+                logger.warning(f"Impossible de récupérer les infos du tenant {user.tenant_id} pour l'utilisateur {user.email}")
+            
+            return Response(user_data)
+            
+        except Exception as e:
+            logger.error(f"Erreur lors de la récupération des infos utilisateur: {e}")
+            return Response(
+                {'error': 'Erreur lors de la récupération des informations utilisateur'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+    
+    def patch(self, request):
+        """Mettre à jour les informations de l'utilisateur"""
+        try:
+            user = request.user
+            if not user or not user.is_authenticated:
+                return Response(
+                    {'error': 'Utilisateur non authentifié'},
+                    status=status.HTTP_401_UNAUTHORIZED
+                )
+            
+            # Utiliser le serializer de mise à jour
+            serializer = UserUpdateSerializer(user, data=request.data, partial=True)
+            
+            if not serializer.is_valid():
+                logger.error(f"❌ Erreurs de validation: {serializer.errors}")
+                return Response(
+                    {'errors': serializer.errors, 'message': 'Données invalides'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            # Sauvegarder les modifications
+            updated_user = serializer.save()
+            logger.info(f"✅ Utilisateur mis à jour avec succès: {updated_user.email}")
+            
+            # Récupérer les données mises à jour avec les informations du tenant
+            user_data = UserDetailSerializer(updated_user).data
+            
+            # Enrichir avec les informations du tenant
+            from .utils import get_tenant_info
+            tenant_info = get_tenant_info(updated_user.tenant_id)
+            
+            if tenant_info:
+                user_data['company'] = tenant_info['name']
+                user_data['tenant_info'] = tenant_info
+            else:
+                user_data['company'] = 'Entreprise inconnue'  
+                user_data['tenant_info'] = None
+            
+            return Response({
+                'user': user_data,
+                'message': 'Profil mis à jour avec succès'
+            })
+            
+        except Exception as e:
+            logger.error(f"Erreur lors de la mise à jour du profil utilisateur: {e}")
+            return Response(
+                {'error': 'Erreur lors de la mise à jour du profil'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+
+class UserAvatarUploadView(APIView):
+    """
+    Vue pour l'upload et la gestion des avatars utilisateur
+    """
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def post(self, request):
+        """Upload d'un nouvel avatar"""
+        try:
+            user = request.user
+            if not user or not user.is_authenticated:
+                return Response(
+                    {'error': 'Utilisateur non authentifié'},
+                    status=status.HTTP_401_UNAUTHORIZED
+                )
+            
+            # Vérifier qu'un fichier a été envoyé
+            if 'avatar' not in request.FILES:
+                return Response(
+                    {'error': 'Aucun fichier avatar fourni'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            avatar_file = request.FILES['avatar']
+            
+            # Valider le type de fichier
+            allowed_types = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp']
+            if avatar_file.content_type not in allowed_types:
+                return Response(
+                    {'error': 'Type de fichier non supporté. Utilisez PNG, JPG ou WebP.'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            # Valider la taille (2MB max)
+            max_size = 2 * 1024 * 1024  # 2MB
+            if avatar_file.size > max_size:
+                return Response(
+                    {'error': 'Le fichier est trop volumineux. Taille maximum: 2MB.'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            # Traiter l'image
+            processed_file = self._process_avatar_image(avatar_file)
+            
+            # Générer un nom de fichier unique
+            file_extension = os.path.splitext(avatar_file.name)[1].lower()
+            filename = f"avatars/{user.tenant_id}/{user.id}_{uuid.uuid4().hex[:8]}{file_extension}"
+            
+            # Supprimer l'ancien avatar s'il existe
+            if user.avatar:
+                self._delete_old_avatar(user.avatar)
+            
+            # Sauvegarder le nouveau fichier
+            file_path = default_storage.save(filename, processed_file)
+            
+            # Construire l'URL complète
+            if hasattr(settings, 'MEDIA_URL') and hasattr(settings, 'MEDIA_ROOT'):
+                avatar_url = f"{request.build_absolute_uri('/')[:-1]}{settings.MEDIA_URL}{file_path}"
+            else:
+                # Fallback pour une URL locale
+                avatar_url = f"{request.build_absolute_uri('/')}/media/{file_path}"
+            
+            # Mettre à jour l'utilisateur
+            user.avatar = avatar_url
+            user.save(update_fields=['avatar'])
+            
+            logger.info(f"✅ Avatar mis à jour pour l'utilisateur {user.email}: {avatar_url}")
+            
+            return Response({
+                'avatar_url': avatar_url,
+                'message': 'Avatar mis à jour avec succès'
+            })
+            
+        except Exception as e:
+            logger.error(f"Erreur lors de l'upload d'avatar pour {request.user.email}: {e}")
+            return Response(
+                {'error': 'Erreur lors de l\'upload de l\'avatar'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+    
+    def delete(self, request):
+        """Supprimer l'avatar actuel"""
+        try:
+            user = request.user
+            if not user or not user.is_authenticated:
+                return Response(
+                    {'error': 'Utilisateur non authentifié'},
+                    status=status.HTTP_401_UNAUTHORIZED
+                )
+            
+            # Supprimer l'ancien avatar s'il existe
+            if user.avatar:
+                self._delete_old_avatar(user.avatar)
+                user.avatar = ''
+                user.save(update_fields=['avatar'])
+                
+                logger.info(f"✅ Avatar supprimé pour l'utilisateur {user.email}")
+                
+                return Response({
+                    'message': 'Avatar supprimé avec succès'
+                })
+            else:
+                return Response(
+                    {'message': 'Aucun avatar à supprimer'},
+                    status=status.HTTP_404_NOT_FOUND
+                )
+                
+        except Exception as e:
+            logger.error(f"Erreur lors de la suppression d'avatar pour {request.user.email}: {e}")
+            return Response(
+                {'error': 'Erreur lors de la suppression de l\'avatar'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+    
+    def _process_avatar_image(self, image_file):
+        """Traiter et redimensionnen l'image d'avatar"""
+        try:
+            # Ouvrir l'image avec Pillow
+            image = Image.open(image_file)
+            
+            # Convertir en RGB si nécessaire (pour PNG avec transparence)
+            if image.mode in ('RGBA', 'LA', 'P'):
+                background = Image.new('RGB', image.size, (255, 255, 255))
+                if image.mode == 'P':
+                    image = image.convert('RGBA')
+                background.paste(image, mask=image.split()[-1] if image.mode == 'RGBA' else None)
+                image = background
+            
+            # Redimensionner à 200x200 pixels
+            size = (200, 200)
+            image = image.resize(size, Image.Resampling.LANCZOS)
+            
+            # Sauvegarder dans un buffer
+            buffer = io.BytesIO()
+            image.save(buffer, format='JPEG', quality=85, optimize=True)
+            buffer.seek(0)
+            
+            return ContentFile(buffer.getvalue())
+            
+        except Exception as e:
+            logger.error(f"Erreur lors du traitement de l'image: {e}")
+            # En cas d'erreur, retourner le fichier original
+            image_file.seek(0)
+            return image_file
+    
+    def _delete_old_avatar(self, avatar_url):
+        """Supprimer l'ancien fichier avatar"""
+        try:
+            # Extraire le chemin relatif depuis l'URL
+            if '/media/' in avatar_url:
+                relative_path = avatar_url.split('/media/')[-1] 
+                if default_storage.exists(relative_path):
+                    default_storage.delete(relative_path)
+                    logger.info(f"Ancien avatar supprimé: {relative_path}")
+        except Exception as e:
+            logger.warning(f"Impossible de supprimer l'ancien avatar: {e}")
+
+
 @api_view(['GET'])
 @permission_classes([permissions.IsAuthenticated])
 def user_info(request):
     """
-    Endpoint pour récupérer les informations de l'utilisateur connecté avec les données du tenant
-    Endpoint: /api/auth/me/
-    OPTIMISATION CRITIQUE: Éviter tenant-service (1.97s!) - utiliser JWT directement
+    Fonction de compatibilité - redirige vers UserInfoView
     """
-    import time
-    
-    try:
-        # AUDIT - Start timing
-        start_time = time.time()
-        logger.info("[AUTH LATENCY AUDIT] /auth/me/ START")
-        
-        user = request.user
-        if not user or not user.is_authenticated:
-            return Response(
-                {'error': 'Utilisateur non authentifié'},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
-        
-        # Phase 1: Récupérer les données de base de l'utilisateur
-        serialization_start = time.time()
-        user_data = UserDetailSerializer(user).data
-        serialization_time = time.time()
-        logger.info(f"[AUTH LATENCY AUDIT] User serialization: {(serialization_time - serialization_start)*1000:.2f}ms")
-        
-        # Phase 2: OPTIMISATION CRITIQUE - Éviter get_tenant_info() qui prend 1.97s
-        tenant_optimization_start = time.time()
-        
-        # Extraire tenant_id du JWT ou de l'utilisateur
-        tenant_id = str(user.tenant_id)
-        
-        # OPTIMISATION: Utiliser des données tenant optimisées (sans appel HTTP)
-        tenant_info = {
-            'id': tenant_id,
-            'name': f"Tenant {tenant_id[:8]}",  # Nom générique
-            'email': f"contact@tenant-{tenant_id[:8]}.com",
-            'is_active': True,  # JWT validé = tenant actif
-            'subscription_plan': 'active',
-            'extracted_from': 'jwt_optimized'  # Pour debug
-        }
-        
-        # Ajouter les informations du tenant aux données utilisateur
-        user_data['company'] = tenant_info['name']  # Pour compatibilité frontend
-        user_data['tenant_info'] = tenant_info
-        
-        tenant_optimization_time = time.time()
-        logger.info(f"[AUTH LATENCY AUDIT] Tenant info (OPTIMIZED): {(tenant_optimization_time - tenant_optimization_start)*1000:.2f}ms")
-        
-        # Total
-        total_time = (time.time() - start_time) * 1000
-        logger.info(f"[AUTH LATENCY AUDIT] TOTAL /auth/me/: {total_time:.2f}ms (vs ~2000ms avant)")
-        
-        return Response(user_data)
-        
-    except Exception as e:
-        logger.error(f"[AUTH LATENCY AUDIT] Erreur lors de la récupération des infos utilisateur: {e}")
-        return Response(
-            {'error': 'Erreur lors de la récupération des informations utilisateur'},
-            status=status.HTTP_500_INTERNAL_SERVER_ERROR
-        )
+    view = UserInfoView()
+    view.request = request
+    view.format_kwarg = None
+    return view.get(request)
 
 
 @api_view(['GET'])

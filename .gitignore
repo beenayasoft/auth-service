@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # === Node.js ===
 node_modules/
 npm-debug.log*
@@ -132,3 +133,6 @@ out/
 
 # === Optional: Ignore secrets by pattern ===
 secrets.*
+=======
+.venv/
+>>>>>>> tenant_ui

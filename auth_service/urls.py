@@ -18,6 +18,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
+from django.conf import settings
+from django.conf.urls.static import static
 
 def health_check(request):
     """Endpoint de santé du service"""
@@ -33,3 +35,7 @@ urlpatterns = [
     path("api/auth/", include('authentication.urls')),
     # path("api/", include('authentication.urls')),  # Commenter cette ligne
 ]
+
+# Servir les fichiers media en développement
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
