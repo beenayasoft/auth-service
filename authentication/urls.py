@@ -15,6 +15,8 @@ from .views import (
     UserLoginView,
     CustomTokenRefreshView,
     ChangePasswordView,
+    UserInfoView,
+    UserAvatarUploadView,
 )
 
 app_name = 'authentication'
@@ -43,9 +45,10 @@ urlpatterns = [
     path('user-info/', user_info, name='user_info'),
     
     # ✅ NOUVEAUX ENDPOINTS POUR LE FRONTEND
-    path('me/', user_info, name='user_info'),
+    path('me/', UserInfoView.as_view(), name='user_info'),
     path('refresh/', CustomTokenRefreshView.as_view(), name='token_refresh'),
     
     # Profil utilisateur
     path('change-password/', ChangePasswordView.as_view(), name='change_password'),
+    path('avatar/', UserAvatarUploadView.as_view(), name='avatar_upload'),
 ]

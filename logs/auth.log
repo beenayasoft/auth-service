@@ -229,3 +229,76 @@ INFO 2025-07-29 10:46:31,755 views 32096 36160 Token rafraîchi pour: oliviermoon
 INFO 2025-07-29 10:46:31,756 views 32096 39004 Token rafraîchi pour: oliviermoon@kewa.ma
 INFO 2025-07-29 12:08:35,402 views 32096 38340 Token rafraîchi pour: oliviermoon@kewa.ma
 INFO 2025-07-29 12:08:35,916 views 32096 11060 Token rafraîchi pour: oliviermoon@kewa.ma
+INFO 2025-07-29 17:14:33,272 views 8228 24136 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-29 17:14:33,377 views 8228 37752 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-29 18:16:25,226 views 8228 32072 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-29 18:16:25,667 views 8228 34916 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 09:22:33,120 views 8228 39900 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 09:22:33,338 views 8228 42464 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 11:34:21,480 views 9308 8000 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 11:34:21,572 views 9308 36288 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 17:13:40,636 views 9308 42752 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 17:13:40,680 views 9308 32536 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 17:13:42,664 views 9308 31356 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 17:13:42,935 views 9308 23680 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 19:16:54,499 views 9308 35396 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-30 19:16:54,546 views 9308 38104 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-31 09:01:10,160 views 9308 41860 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-31 09:01:10,520 views 9308 38804 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-31 10:56:52,578 views 9308 11620 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-31 10:56:52,693 views 9308 41232 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-31 14:49:21,581 views 9308 48744 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-31 14:49:21,679 views 9308 26292 Token rafraîchi pour: elvislex@live.fr
+ERROR 2025-07-31 15:11:55,724 utils 27144 38460 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:11:55,759 views 27144 38460 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:12:03,836 utils 27144 49048 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:12:03,836 views 27144 49048 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:14:21,937 utils 27144 26236 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:14:21,937 views 27144 26236 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:14:30,053 utils 27144 33500 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:14:30,054 views 27144 33500 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:19:12,431 utils 27144 43660 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:19:12,432 views 27144 43660 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:20:24,359 utils 27144 16876 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:20:24,360 views 27144 16876 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:20:32,610 utils 27144 6952 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:20:32,610 views 27144 6952 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:25:10,993 utils 27144 48080 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:25:10,994 views 27144 48080 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:25:18,942 utils 27144 44704 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:25:18,942 views 27144 44704 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:26:06,840 utils 27144 38984 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:26:06,840 views 27144 38984 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:33:00,421 utils 27144 47548 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:33:00,422 views 27144 47548 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:33:08,430 utils 27144 31168 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:33:08,431 views 27144 31168 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:35:53,193 utils 27144 35284 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:35:53,193 views 27144 35284 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:36:17,098 utils 27144 20032 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:36:17,098 views 27144 20032 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:38:19,851 utils 27144 9296 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:38:19,851 views 27144 9296 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-07-31 15:38:28,083 utils 27144 18396 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-07-31 15:38:28,083 views 27144 18396 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+INFO 2025-07-31 19:42:28,872 views 27144 19840 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-07-31 19:42:29,084 views 27144 19492 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-01 09:09:53,725 views 27144 22604 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-01 09:09:53,726 views 27144 32700 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-01 15:37:38,537 views 27144 14628 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-01 15:37:38,700 views 27144 34928 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-01 19:53:08,145 views 27144 11696 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-01 19:53:08,483 views 27144 12364 Token rafraîchi pour: elvislex@live.fr
+ERROR 2025-08-01 19:53:25,778 utils 27144 41728 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-01 19:53:25,779 views 27144 41728 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+INFO 2025-08-01 22:18:58,055 views 27144 29564 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-01 22:18:58,205 views 27144 31708 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-01 23:04:37,627 views 20012 21712 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-01 23:35:27,877 views 20012 42936 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-01 23:36:06,792 views 20012 25052 Ancien avatar supprimé: avatars/cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f/f890595b-1b1d-4dfe-92c7-66b39a0291a0_f8bb7724.jpg
+INFO 2025-08-01 23:36:31,024 views 20012 40388 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-01 23:37:01,011 views 20012 32140 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-02 02:24:21,853 views 20012 26040 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-02 02:24:22,009 views 20012 50020 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-02 17:09:49,214 views 20012 26080 Token rafraîchi pour: elvislex@live.fr
+INFO 2025-08-02 17:09:49,355 views 20012 48248 Token rafraîchi pour: elvislex@live.fr
