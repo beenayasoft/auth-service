@@ -281,3 +281,32 @@ ERROR 2025-08-02 15:59:53,613 utils 19024 22492 Erreur lors de la récupération d
 WARNING 2025-08-02 15:59:53,621 views 19024 22492 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
 ERROR 2025-08-02 16:26:13,392 utils 19024 8696 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
 WARNING 2025-08-02 16:26:13,430 views 19024 8696 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+INFO 2025-08-02 17:02:27,462 views 8052 17696 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+ERROR 2025-08-02 17:04:57,465 utils 8052 22316 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 17:04:57,487 views 8052 22316 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-02 17:06:16,886 utils 8052 14016 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 17:06:16,893 views 8052 14016 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-02 17:10:15,887 utils 8052 16836 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 17:10:16,442 views 8052 16836 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-02 17:12:00,755 utils 8052 3496 Erreur lors de la récupération du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 17:12:01,227 views 8052 3496 Impossible de récupérer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+INFO 2025-08-02 17:15:41,299 views 20724 18680 [AUTH LATENCY AUDIT] /auth/me/ START
+INFO 2025-08-02 17:15:41,361 views 20724 7164 [AUTH LATENCY AUDIT] /auth/me/ START
+INFO 2025-08-02 17:15:41,800 views 20724 7164 [AUTH LATENCY AUDIT] User serialization: 381.91ms
+INFO 2025-08-02 17:15:41,802 views 20724 18680 [AUTH LATENCY AUDIT] User serialization: 392.08ms
+INFO 2025-08-02 17:15:42,852 views 20724 18680 [AUTH LATENCY AUDIT] Tenant info (OPTIMIZED): 0.00ms
+INFO 2025-08-02 17:15:43,143 views 20724 18680 [AUTH LATENCY AUDIT] TOTAL /auth/me/: 1844.55ms (vs ~2000ms avant)
+INFO 2025-08-02 17:15:42,176 views 20724 7164 [AUTH LATENCY AUDIT] Tenant info (OPTIMIZED): 0.00ms
+INFO 2025-08-02 17:15:43,150 views 20724 7164 [AUTH LATENCY AUDIT] TOTAL /auth/me/: 1788.33ms (vs ~2000ms avant)
+INFO 2025-08-02 17:20:17,917 views 20724 24624 [AUTH LATENCY AUDIT] /auth/me/ START
+INFO 2025-08-02 17:20:18,014 views 20724 3356 [AUTH LATENCY AUDIT] /auth/me/ START
+INFO 2025-08-02 17:20:18,141 views 20724 3356 [AUTH LATENCY AUDIT] User serialization: 87.55ms
+INFO 2025-08-02 17:20:18,176 views 20724 3356 [AUTH LATENCY AUDIT] Tenant info (OPTIMIZED): 2.08ms
+INFO 2025-08-02 17:20:18,181 views 20724 24624 [AUTH LATENCY AUDIT] User serialization: 212.19ms
+INFO 2025-08-02 17:20:18,283 views 20724 3356 [AUTH LATENCY AUDIT] TOTAL /auth/me/: 268.35ms (vs ~2000ms avant)
+INFO 2025-08-02 17:20:18,295 views 20724 24624 [AUTH LATENCY AUDIT] Tenant info (OPTIMIZED): 1.01ms
+INFO 2025-08-02 17:20:18,325 views 20724 24624 [AUTH LATENCY AUDIT] TOTAL /auth/me/: 416.34ms (vs ~2000ms avant)
+INFO 2025-08-02 17:21:06,634 views 20724 21404 [AUTH LATENCY AUDIT] /auth/me/ START
+INFO 2025-08-02 17:21:06,640 views 20724 21404 [AUTH LATENCY AUDIT] User serialization: 4.56ms
+INFO 2025-08-02 17:21:06,641 views 20724 21404 [AUTH LATENCY AUDIT] Tenant info (OPTIMIZED): 0.00ms
+INFO 2025-08-02 17:21:06,642 views 20724 21404 [AUTH LATENCY AUDIT] TOTAL /auth/me/: 8.59ms (vs ~2000ms avant)
