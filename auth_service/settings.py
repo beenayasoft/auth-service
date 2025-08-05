@@ -197,6 +197,8 @@ CORS_ALLOW_ALL_ORIGINS = DEBUG
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React frontend
     "http://127.0.0.1:3000",
+    ".vercel.app",
+    "https://*.vercel.app",
 ] if not DEBUG else []
 
 # Créer le dossier logs s'il n'existe pas
