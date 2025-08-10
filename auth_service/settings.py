@@ -189,12 +189,19 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_REFRESH_LIFETIME": timedelta(days=1),
 }
 
-# Services externes
+# Services externes (Legacy - sera remplacé par ServiceClient)
 TENANT_SERVICE_URL = config('TENANT_SERVICE_URL', default='http://localhost:8001')
 
 # API Configuration
 API_PORT = config('API_PORT', default=8002, cast=int)
 API_HOST = config('API_HOST', default='0.0.0.0')
+
+# SOA Configuration pour ServiceClient
+SERVICE_NAME = 'auth'
+SERVICE_PORT = API_PORT
+API_GATEWAY_URL = config('API_GATEWAY_URL', default='http://localhost:8000')
+SERVICE_HEALTH_ENDPOINT = '/health/'
+SERVICE_ROUTES = ['/api/auth/']
 
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = DEBUG
@@ -230,6 +237,7 @@ LOGGING = {
             "class": "logging.FileHandler",
             "filename": LOGS_DIR / "auth.log",
             "formatter": "verbose",
+            "encoding": "utf-8",
         },
     },
     "root": {

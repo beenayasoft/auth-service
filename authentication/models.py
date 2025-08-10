@@ -157,6 +157,18 @@ class User(AbstractBaseUser, PermissionsMixin):
             return self.username
         return self.email.split('@')[0]
     
+    @property
+    def avatar_url(self):
+        """Retourne l'URL complète de l'avatar"""
+        if self.avatar:
+            # Si c'est déjà une URL complète, la retourner telle quelle
+            if self.avatar.startswith('http'):
+                return self.avatar
+            # Sinon, construire l'URL avec le MEDIA_URL
+            from django.conf import settings
+            return f"http://localhost:8002{settings.MEDIA_URL}{self.avatar.lstrip('/')}"
+        return None
+    
     def get_tenant_info(self):
         """Récupérer les informations du tenant depuis le service tenant"""
         try:

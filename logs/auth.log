@@ -304,3 +304,143 @@ INFO 2025-08-02 17:09:49,214 views 20012 26080 Token rafra�chi pour: elvislex@
 INFO 2025-08-02 17:09:49,355 views 20012 48248 Token rafra�chi pour: elvislex@live.fr
 INFO 2025-08-02 19:32:20,306 views 29384 34956 Token rafra�chi pour: elvislex@live.fr
 INFO 2025-08-02 19:32:20,430 views 29384 50032 Token rafra�chi pour: elvislex@live.fr
+INFO 2025-08-02 21:22:32,284 views 48264 21204 Connexion r�ussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+ERROR 2025-08-02 21:28:31,045 utils 48264 44332 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 21:28:31,045 views 48264 44332 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-02 21:28:46,003 utils 48264 41916 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 21:28:46,004 views 48264 41916 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-02 21:29:00,655 utils 48264 6508 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 21:29:00,656 views 48264 6508 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-02 21:29:41,016 utils 48264 36100 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 21:29:41,016 views 48264 36100 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-02 22:00:56,747 utils 48264 1692 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 22:00:56,748 views 48264 1692 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-02 22:04:55,764 utils 48264 40872 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 22:04:55,764 views 48264 40872 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+INFO 2025-08-02 22:09:00,632 views 48264 44128 Connexion r�ussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+ERROR 2025-08-02 22:34:24,942 utils 48264 49252 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-02 22:34:24,943 views 48264 49252 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+INFO 2025-08-03 10:04:13,565 views 48264 18880 Connexion r�ussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+ERROR 2025-08-03 10:06:54,788 utils 48264 36116 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-03 10:06:54,789 views 48264 36116 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-03 10:26:47,908 utils 48264 35432 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-03 10:26:47,909 views 48264 35432 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+ERROR 2025-08-03 10:26:56,145 utils 48264 38916 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-03 10:26:56,146 views 48264 38916 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+INFO 2025-08-03 11:20:28,989 views 48264 22188 Connexion r�ussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+ERROR 2025-08-03 11:24:24,552 utils 48264 21704 Erreur lors de la r�cup�ration du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-03 11:24:24,552 views 48264 21704 Impossible de r�cup�rer les infos du tenant cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f pour l'utilisateur elvislex@live.fr
+INFO 2025-08-03 12:28:26,677 views 36588 27940 Connexion r�ussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-03 12:43:11,594 views 36588 47276 Connexion r�ussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-03 13:00:19,595 views 36588 23652 Connexion r�ussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-03 13:40:44,264 views 21764 11084 Données reçues pour inscription: {'email': 'jean@live.fr', 'username': 'jean', 'password': 'azertyuiop', 'password2': 'azertyuiop', 'first_name': 'Elvis', 'last_name': 'tuekinkin', 'company': 'bazai'}
+ERROR 2025-08-03 13:40:44,696 views 21764 11084 Erreurs de validation: {'password': [ErrorDetail(string='Ce mot de passe est trop courant.', code='password_too_common')]}
+INFO 2025-08-03 13:49:20,139 views 21764 46068 Données reçues pour inscription: {'email': 'jessempiga@mpj.ma', 'username': 'jessempiga', 'password': 'azerty', 'password2': 'azerty', 'first_name': 'Jesse', 'last_name': 'MPIGA', 'company': 'MPJ'}
+ERROR 2025-08-03 13:49:20,513 views 21764 46068 Erreurs de validation: {'password': [ErrorDetail(string='Ce mot de passe est trop court. Il doit contenir au minimum 8 caractères.', code='password_too_short'), ErrorDetail(string='Ce mot de passe est trop courant.', code='password_too_common')]}
+INFO 2025-08-03 13:54:31,369 views 21764 49064 Données reçues pour inscription: {'email': 'jessempiga@mpj.ma', 'username': 'jessempiga', 'password': 'azerty', 'password2': 'azerty', 'first_name': 'Jesse', 'last_name': 'MPIGA', 'company': 'MPJ'}
+ERROR 2025-08-03 13:54:31,770 views 21764 49064 Erreurs de validation: {'password': [ErrorDetail(string='Ce mot de passe est trop court. Il doit contenir au minimum 8 caractères.', code='password_too_short'), ErrorDetail(string='Ce mot de passe est trop courant.', code='password_too_common')]}
+INFO 2025-08-03 13:59:53,600 views 21764 47484 Données reçues pour inscription: {'email': 'jessempiga@mpj.ma', 'username': 'jessempiga', 'password': 'azerty', 'password2': 'azerty', 'first_name': 'Jesse', 'last_name': 'MPIGA', 'company': 'MPJ'}
+ERROR 2025-08-03 13:59:53,996 views 21764 47484 Erreurs de validation: {'password': [ErrorDetail(string='Ce mot de passe est trop court. Il doit contenir au minimum 8 caractères.', code='password_too_short'), ErrorDetail(string='Ce mot de passe est trop courant.', code='password_too_common')]}
+INFO 2025-08-03 14:02:23,771 views 21764 28360 Données reçues pour inscription: {'email': 'jessempiga@mpj.ma', 'username': 'jessempiga', 'password': 'azerty', 'password2': 'azerty', 'first_name': 'Jesse', 'last_name': 'MPIGA', 'company': 'MPJ'}
+ERROR 2025-08-03 14:02:24,183 views 21764 28360 Erreurs de validation: {'password': [ErrorDetail(string='Ce mot de passe est trop court. Il doit contenir au minimum 8 caractères.', code='password_too_short'), ErrorDetail(string='Ce mot de passe est trop courant.', code='password_too_common')]}
+INFO 2025-08-03 14:04:49,277 views 21764 21564 Données reçues pour inscription: {'email': 'jessempiga@mpj.ma', 'username': 'jessempiga', 'password': 'azerty', 'password2': 'azerty', 'first_name': 'Jesse', 'last_name': 'MPIGA', 'company': 'MPJ'}
+ERROR 2025-08-03 14:04:49,763 views 21764 21564 Erreurs de validation: {'password': [ErrorDetail(string='Ce mot de passe est trop court. Il doit contenir au minimum 8 caractères.', code='password_too_short'), ErrorDetail(string='Ce mot de passe est trop courant.', code='password_too_common')]}
+INFO 2025-08-03 14:05:19,151 views 21764 1828 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-03 14:11:00,362 views 21764 7496 Données reçues pour inscription: {'email': 'jessempiga@mpj.ma', 'username': 'jessempiga', 'password': 'Bienvenue5', 'password2': 'Bienvenue5', 'first_name': 'Jesse', 'last_name': 'MPIGA', 'company': 'ETAO'}
+ERROR 2025-08-03 14:11:03,110 views 21764 7496 Erreur lors de la création de l'utilisateur: {'company': ErrorDetail(string="Impossible de créer l'entreprise. Ce nom existe peut-être déjà.", code='invalid')}
+INFO 2025-08-03 14:17:36,304 views 21764 11096 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-03 21:55:15,968 views 21764 37556 Données reçues pour inscription: {'email': 'jessempiga@mpj.ma', 'username': 'jessempiga', 'password': 'Bienvenue5', 'password2': 'Bienvenue5', 'first_name': 'Jesse', 'last_name': 'MPIGA', 'company': 'MPJ'}
+INFO 2025-08-03 21:55:22,665 views 21764 37556 Utilisateur créé avec succès: jessempiga@mpj.ma
+INFO 2025-08-04 10:55:39,555 views 21764 34656 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+WARNING 2025-08-04 11:53:40,767 utils 21764 42624 Tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 non trouvé (status: 500)
+WARNING 2025-08-04 11:53:40,770 views 21764 42624 Impossible de récupérer les infos du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 pour l'utilisateur jessempiga@mpj.ma
+WARNING 2025-08-04 11:53:44,484 utils 21764 42876 Tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 non trouvé (status: 500)
+WARNING 2025-08-04 11:53:44,485 views 21764 42876 Impossible de récupérer les infos du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 pour l'utilisateur jessempiga@mpj.ma
+WARNING 2025-08-04 11:54:10,038 utils 21764 39060 Tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 non trouvé (status: 500)
+WARNING 2025-08-04 11:54:10,038 views 21764 39060 Impossible de récupérer les infos du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 pour l'utilisateur jessempiga@mpj.ma
+WARNING 2025-08-04 11:54:13,955 utils 21764 16348 Tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 non trouvé (status: 500)
+WARNING 2025-08-04 11:54:13,955 views 21764 16348 Impossible de récupérer les infos du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 pour l'utilisateur jessempiga@mpj.ma
+INFO 2025-08-04 12:02:55,348 views 21764 2596 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-04 13:09:23,333 views 21764 2660 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-04 13:12:41,125 views 21764 25708 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-04 14:48:02,435 views 21764 10732 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-04 16:01:59,197 views 21764 14528 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-04 18:23:18,076 views 32920 37484 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-04 20:22:59,824 views 32920 50072 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-04 21:52:08,567 views 32920 41732 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-05 03:43:27,470 views 32920 10072 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-05 04:43:37,212 views 32920 46388 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-05 10:42:43,731 views 32920 11228 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-05 11:43:07,130 views 32920 37956 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-05 15:23:13,016 views 32920 36316 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-05 15:48:18,749 views 43308 4124 Token rafraîchi pour: jessempiga@mpj.ma
+INFO 2025-08-05 16:25:06,622 views 43308 34516 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-05 18:15:18,366 views 43308 36852 Token rafraîchi pour: jessempiga@mpj.ma
+INFO 2025-08-05 20:22:04,739 views 43308 40516 Token rafraîchi pour: jessempiga@mpj.ma
+INFO 2025-08-05 21:22:07,154 views 43308 18044 Token rafraîchi pour: jessempiga@mpj.ma
+INFO 2025-08-05 22:55:12,288 views 43308 22180 Token rafraîchi pour: jessempiga@mpj.ma
+INFO 2025-08-06 01:54:07,064 views 43308 41584 Token rafraîchi pour: jessempiga@mpj.ma
+INFO 2025-08-06 02:41:00,511 views 43308 11700 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 02:47:35,661 views 43308 39448 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 03:17:34,029 views 43308 45920 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 03:47:42,761 views 43308 9596 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 10:42:42,735 views 43308 50952 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 11:46:29,439 views 43308 41872 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 12:55:38,653 views 43308 35272 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 13:09:40,532 views 43308 47072 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 16:17:12,208 views 43308 35732 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 17:18:07,018 views 43308 33720 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 22:21:25,988 views 43308 29860 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+ERROR 2025-08-06 23:01:17,839 utils 43308 41580 Erreur lors de la récupération du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-06 23:01:17,840 views 43308 41580 Impossible de récupérer les infos du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 pour l'utilisateur jessempiga@mpj.ma
+INFO 2025-08-06 23:02:59,235 views 43308 33540 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-06 23:04:33,802 views 43308 31160 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-06 23:24:14,986 views 43308 47136 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-07 06:05:48,375 views 43308 49476 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-07 11:13:33,129 views 43308 48428 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-07 12:16:05,750 views 43308 25680 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-07 14:52:41,597 views 43308 50196 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-07 18:21:09,309 views 43308 24544 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+ERROR 2025-08-07 19:05:07,606 utils 43308 18216 Erreur lors de la récupération du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-07 19:05:07,608 views 43308 18216 Impossible de récupérer les infos du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 pour l'utilisateur jessempiga@mpj.ma
+INFO 2025-08-07 19:21:46,938 views 43308 43840 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-08 10:45:53,783 views 50796 44412 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-08 11:47:26,151 views 50796 44560 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-08 12:58:03,195 views 50796 41584 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-08 16:14:31,347 views 50796 34464 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+WARNING 2025-08-08 16:14:55,214 utils 50796 13156 Tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 non trouvé (status: 500)
+WARNING 2025-08-08 16:14:55,215 views 50796 13156 Impossible de récupérer les infos du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 pour l'utilisateur jessempiga@mpj.ma
+INFO 2025-08-08 16:15:23,726 views 50796 2976 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+WARNING 2025-08-08 16:16:10,270 utils 50796 19452 Tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 non trouvé (status: 500)
+WARNING 2025-08-08 16:16:10,271 views 50796 19452 Impossible de récupérer les infos du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 pour l'utilisateur jessempiga@mpj.ma
+INFO 2025-08-08 16:18:06,363 views 50796 48644 Connexion réussie pour elvislex@live.fr (tenant: cf22f06c-4134-4bf0-9fbd-8a00c04a6c8f)
+INFO 2025-08-08 17:42:33,462 views 50796 12168 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-08 18:53:33,098 views 50796 30112 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-08 21:37:38,487 views 50796 42588 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-08 23:50:54,169 views 50796 26796 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 10:29:21,232 views 50796 9500 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 10:46:02,627 views 50796 12024 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 11:04:47,947 views 50796 7964 Connexion réussie pour test@beenaya.local (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 11:14:47,173 views 50796 40696 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 11:29:01,585 views 50796 45528 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 12:33:43,739 views 50796 51096 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 12:36:12,770 views 50796 51172 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 15:09:20,584 views 50796 29176 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 15:16:22,678 views 50796 25076 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 15:34:45,838 views 50796 50600 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 16:46:51,896 views 50796 11360 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 18:41:41,989 views 50796 25908 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 20:22:31,996 views 50796 24704 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 20:33:31,978 views 50796 46632 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 20:57:23,607 views 50796 47636 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-09 22:18:52,755 views 11788 18912 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-10 01:19:00,011 views 11788 10660 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+ERROR 2025-08-10 01:27:06,369 utils 11788 37436 Erreur lors de la récupération du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5: HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=5)
+WARNING 2025-08-10 01:27:06,370 views 11788 37436 Impossible de récupérer les infos du tenant 94c3319e-5e90-47c2-aa59-7c9ee22846e5 pour l'utilisateur jessempiga@mpj.ma
+INFO 2025-08-10 02:24:25,183 views 11788 45740 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-10 09:46:37,794 views 11788 52200 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-10 10:47:03,384 views 11788 38340 Connexion réussie pour jessempiga@mpj.ma (tenant: 94c3319e-5e90-47c2-aa59-7c9ee22846e5)
+INFO 2025-08-10 11:45:07,394 views 11788 11012 Données reçues pour inscription: {'email': 'teurtysoyono@gmail.com', 'username': 'teurtysoyono', 'password': 'Bienvenue5', 'password2': 'Bienvenue5', 'first_name': 'Teurtys', 'last_name': 'OYONO', 'company': 'MEAK LOCATION'}
+INFO 2025-08-10 11:45:14,418 views 11788 11012 Utilisateur créé avec succès: teurtysoyono@gmail.com
+INFO 2025-08-10 14:40:58,400 views 11788 35816 Connexion réussie pour teurtysoyono@gmail.com (tenant: d7171c44-d4b0-4638-9110-84f5a09f0aa6)
+INFO 2025-08-10 15:49:28,568 views 11788 7496 Connexion réussie pour teurtysoyono@gmail.com (tenant: d7171c44-d4b0-4638-9110-84f5a09f0aa6)

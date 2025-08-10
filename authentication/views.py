@@ -71,12 +71,12 @@ class UserRegistrationView(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny]
     
     def create(self, request, *args, **kwargs):
-        logger.info(f"🔍 Données reçues pour inscription: {request.data}")
+        logger.info(f"Données reçues pour inscription: {request.data}")
         
         serializer = self.get_serializer(data=request.data)
         
         if not serializer.is_valid():
-            logger.error(f"❌ Erreurs de validation: {serializer.errors}")
+            logger.error(f"Erreurs de validation: {serializer.errors}")
             return Response(
                 {'errors': serializer.errors, 'message': 'Données invalides'},
                 status=status.HTTP_400_BAD_REQUEST
@@ -86,14 +86,14 @@ class UserRegistrationView(generics.CreateAPIView):
             # Validation du tenant via le tenant-service
             tenant_id = serializer.validated_data.get('tenant_id')
             if tenant_id and not validate_tenant_exists(tenant_id):
-                logger.error(f"❌ Tenant invalide: {tenant_id}")
+                logger.error(f"Tenant invalide: {tenant_id}")
                 return Response(
                     {'error': 'Tenant invalide ou inactif'},
                     status=status.HTTP_400_BAD_REQUEST
                 )
             
             user = serializer.save()
-            logger.info(f"✅ Utilisateur créé avec succès: {user.email}")
+            logger.info(f"Utilisateur créé avec succès: {user.email}")
             
             # Créer les tokens JWT
             refresh = RefreshToken.for_user(user)
@@ -108,7 +108,7 @@ class UserRegistrationView(generics.CreateAPIView):
             }, status=status.HTTP_201_CREATED)
             
         except Exception as e:
-            logger.error(f"❌ Erreur lors de la création de l'utilisateur: {str(e)}")
+            logger.error(f"Erreur lors de la création de l'utilisateur: {str(e)}")
             return Response(
                 {'error': f'Erreur lors de la création: {str(e)}'},
                 status=status.HTTP_400_BAD_REQUEST
@@ -305,7 +305,7 @@ class UserInfoView(APIView):
             serializer = UserUpdateSerializer(user, data=request.data, partial=True)
             
             if not serializer.is_valid():
-                logger.error(f"❌ Erreurs de validation: {serializer.errors}")
+                logger.error(f"Erreurs de validation: {serializer.errors}")
                 return Response(
                     {'errors': serializer.errors, 'message': 'Données invalides'},
                     status=status.HTTP_400_BAD_REQUEST
@@ -313,7 +313,7 @@ class UserInfoView(APIView):
             
             # Sauvegarder les modifications
             updated_user = serializer.save()
-            logger.info(f"✅ Utilisateur mis à jour avec succès: {updated_user.email}")
+            logger.info(f"Utilisateur mis à jour avec succès: {updated_user.email}")
             
             # Récupérer les données mises à jour avec les informations du tenant
             user_data = UserDetailSerializer(updated_user).data
@@ -408,7 +408,7 @@ class UserAvatarUploadView(APIView):
             user.avatar = avatar_url
             user.save(update_fields=['avatar'])
             
-            logger.info(f"✅ Avatar mis à jour pour l'utilisateur {user.email}: {avatar_url}")
+            logger.info(f"Avatar mis à jour pour l'utilisateur {user.email}: {avatar_url}")
             
             return Response({
                 'avatar_url': avatar_url,
@@ -438,7 +438,7 @@ class UserAvatarUploadView(APIView):
                 user.avatar = ''
                 user.save(update_fields=['avatar'])
                 
-                logger.info(f"✅ Avatar supprimé pour l'utilisateur {user.email}")
+                logger.info(f"Avatar supprimé pour l'utilisateur {user.email}")
                 
                 return Response({
                     'message': 'Avatar supprimé avec succès'

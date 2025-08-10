@@ -35,6 +35,8 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
             'last_name': self.user.last_name,
             'tenant_id': str(self.user.tenant_id),
             'is_verified': self.user.is_verified,
+            'avatar': self.user.avatar_url,
+            'phone': self.user.phone,
         }
         
         return data
@@ -82,6 +84,7 @@ class UserDetailSerializer(serializers.ModelSerializer):
     """
     full_name = serializers.ReadOnlyField()
     tenant_id = serializers.ReadOnlyField()
+    avatar = serializers.SerializerMethodField()
     
     class Meta:
         model = User
@@ -93,6 +96,9 @@ class UserDetailSerializer(serializers.ModelSerializer):
         read_only_fields = [
             'id', 'email', 'date_joined', 'tenant_id', 'is_verified'
         ]
+    
+    def get_avatar(self, obj):
+        return obj.avatar_url
 
 
 class PasswordChangeSerializer(serializers.Serializer):
@@ -244,6 +250,7 @@ class UserSerializer(serializers.ModelSerializer):
     full_name = serializers.ReadOnlyField()
     display_name = serializers.ReadOnlyField()
     tenant_info = serializers.SerializerMethodField()
+    avatar = serializers.SerializerMethodField()
     
     class Meta:
         model = User
@@ -256,6 +263,9 @@ class UserSerializer(serializers.ModelSerializer):
         read_only_fields = [
             'id', 'email', 'date_joined', 'tenant_id', 'is_verified'
         ]
+    
+    def get_avatar(self, obj):
+        return obj.avatar_url
     
     def get_tenant_info(self, obj):
         """Récupérer les informations du tenant"""
